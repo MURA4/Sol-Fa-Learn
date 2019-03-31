@@ -1,0 +1,55 @@
+package ru.startandroid.last;
+
+        import android.content.Intent;
+        import android.support.v7.app.AppCompatActivity;
+        import android.os.Bundle;
+        import android.view.View;
+        import android.widget.Button;
+
+public class gamma extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_gamma);
+
+        chore = (Button) findViewById(R.id.accord);
+        interval = (Button) findViewById(R.id.interval);
+        klav = (Button) findViewById(R.id.klav);
+        chore.setOnClickListener(
+                new View.OnClickListener(){
+                    @Override
+                    public void onClick (View v){
+                        Intent intent = new Intent(".chord");
+                        startActivity(intent);
+
+                    }
+                }
+        );
+
+        interval.setOnClickListener(
+                new View.OnClickListener(){
+                    @Override
+                    public void onClick (View v){
+                        Intent intent = new Intent(".interval");
+                        startActivity(intent);
+
+                    }
+                }
+        );
+        klav.setOnClickListener(
+                new View.OnClickListener(){
+                    @Override
+                    public void onClick (View v){
+                        Intent intent = new Intent(".klav");
+                        startActivity(intent);
+
+                    }
+                }
+        );
+    }
+    private Button interval;
+    private Button klav;
+    private Button chore;
+
+}
