@@ -52,9 +52,10 @@
             android:background="@drawable/chat" />
 
     </LinearLayout>
+
     <Button
         android:id="@+id/button"
-        android:layout_width="150dp"
+        android:layout_width="wrap_content"
         android:layout_height="70dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
@@ -72,7 +73,7 @@
 
     <Button
         android:id="@+id/butto4n"
-        android:layout_width="190dp"
+        android:layout_width="wrap_content"
         android:layout_height="70dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"

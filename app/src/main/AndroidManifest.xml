@@ -51,12 +51,12 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".gamma" >
-        <intent-filter>
-            <action android:name=".gamma" />
+        <activity android:name=".gamma">
+            <intent-filter>
+                <action android:name=".gamma" />
 
-            <category android:name="android.intent.category.DEFAULT" />
-        </intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".inf"
@@ -64,6 +64,20 @@
             android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name=".inf" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".gamma1">
+            <intent-filter>
+                <action android:name=".gamma1" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".gamma2">
+            <intent-filter>
+                <action android:name=".gamma2" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>

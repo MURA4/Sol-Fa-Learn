@@ -1,6 +1,5 @@
 package ru.startandroid.last;
 
-
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.support.v7.app.AppCompatActivity;
@@ -11,16 +10,15 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
-public class chordton extends AppCompatActivity {
+public class gamma1 extends AppCompatActivity {
 
     @Override
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_chordton);
+        setContentView(R.layout.activity_gamma1);
         chore = (Button) findViewById(R.id.accord);
         interval = (Button) findViewById(R.id.interval);
-
-        gamma = (Button) findViewById(R.id.gamma);
         klav = (Button) findViewById(R.id.klav);
         chore.setOnClickListener(
                 new View.OnClickListener(){
@@ -33,16 +31,6 @@ public class chordton extends AppCompatActivity {
                 }
         );
 
-        gamma.setOnClickListener(
-                new View.OnClickListener(){
-                    @Override
-                    public void onClick (View v){
-                        Intent intent = new Intent(".gamma");
-                        startActivity(intent);
-
-                    }
-                }
-        );
         interval.setOnClickListener(
                 new View.OnClickListener(){
                     @Override
@@ -63,22 +51,24 @@ public class chordton extends AppCompatActivity {
                     }
                 }
         );
-        RadioButton bdur = (RadioButton)findViewById(R.id.bdur);
-        bdur.setOnClickListener(radioButtonClickListener);
 
-        RadioButton cdur = (RadioButton)findViewById(R.id.cdur);
-        cdur.setOnClickListener(radioButtonClickListener);
+        RadioButton сdur = (RadioButton)findViewById(R.id.cdur);
+        сdur.setOnClickListener(radioButtonClickListener);
+
+        RadioButton amin = (RadioButton)findViewById(R.id.amin);
+        amin.setOnClickListener(radioButtonClickListener2);
+
         txt = findViewById(R.id.textView5);
+        txt2 = findViewById(R.id.textView6);
     }
     private Button interval;
     private Button klav;
     private Button chore;
-    private Button gamma;
-
     View.OnClickListener radioButtonClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            RadioGroup  radioGroup = findViewById(R.id.radio);
+            RadioGroup radioGroup = findViewById(R.id.radio);
+
             int checkedRadioButtonId = radioGroup.getCheckedRadioButtonId();
 
             RadioButton myRadioButton = (RadioButton) findViewById(checkedRadioButtonId);
@@ -86,14 +76,37 @@ public class chordton extends AppCompatActivity {
             String strText;
             strText = myRadioButton.getText().toString();
 
-            if(strText.equals("B-dur")) {
-                Drawable img = getResources().getDrawable(R.drawable.bdurchord);
-                img.setBounds(0, 0, 800, 400);
+
+            if(strText.equals("До мажор")) {
+                Drawable img = getResources().getDrawable(R.drawable.cdurx);
+                img.setBounds(0, 0, 1000, 200);
+                txt.setCompoundDrawables(img, null, null, null);
+
+            }
+
+        }
+    };
+    View.OnClickListener radioButtonClickListener2 = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+
+            RadioGroup radioGroup2 = findViewById(R.id.radio);
+
+            int checkedRadioButtonId2 = radioGroup2.getCheckedRadioButtonId();
+
+            RadioButton myRadioButton2 = (RadioButton) findViewById(checkedRadioButtonId2);
+
+            String strText2;
+            strText2 = myRadioButton2.getText().toString();
+
+            if(strText2.equals("Ля минор")) {
+                Drawable img = getResources().getDrawable(R.drawable.aminx);
+                img.setBounds(0, 0, 1000, 200);
                 txt.setCompoundDrawables(img, null, null, null);
 
             }
         }
     };
     TextView txt;
-
+    TextView txt2;
 }
