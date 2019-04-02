@@ -1,0 +1,35 @@
+{
+  "project_info": {
+    "project_number": "544531064148",
+    "firebase_url": "https://chatm-52340.firebaseio.com",
+    "project_id": "chatm-52340",
+    "storage_bucket": "chatm-52340.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:544531064148:android:8ff4cbcca93cc12d",
+        "android_client_info": {
+          "package_name": "ru.startandroid.last"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCnuCk1PZo5WiUCMqTT_VYnkGCxFjVDeCU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "544531064148-qo5m1m3cdcclevvr593ikb0e3q60g6ct.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

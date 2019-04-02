@@ -20,7 +20,9 @@ public class MainActivity extends AppCompatActivity {
     private Button chore;
     private Button gamma;
     private Button inf;
+    private Button chat;
     public void addListenerOnButton(){
+        chat = (Button) findViewById(R.id.chat);
         chore = (Button) findViewById(R.id.accord);
         interval = (Button) findViewById(R.id.interval);
         inf = (Button) findViewById(R.id.inf);
@@ -41,6 +43,16 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onClick (View v){
                         Intent intent = new Intent(".inf");
+                        startActivity(intent);
+
+                    }
+                }
+        );
+        chat.setOnClickListener(
+                new View.OnClickListener(){
+                    @Override
+                    public void onClick (View v){
+                        Intent intent = new Intent(".Chat");
                         startActivity(intent);
 
                     }
